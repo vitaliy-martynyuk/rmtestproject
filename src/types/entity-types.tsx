@@ -1,4 +1,5 @@
 import { Key } from "react";
+import { UseMutationResult } from "react-query";
 
 export interface Entity {
   id: Key;
@@ -14,4 +15,5 @@ export interface Data {
     isLoading: boolean;
     isError: boolean;
   };
+  mutationResponce: UseMutationResult<Response, unknown, Entity, unknown>;
 }

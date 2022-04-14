@@ -6,12 +6,11 @@ export const fetchData = (url: string) => async () => {
 };
 
 export const postData = async (url: string, method: string, data: Entity) => {
-  const res = await fetch(url, {
+  return await fetch(url, {
     method,
     body: JSON.stringify(data),
     headers: {
       "Content-type": "application/json; charset=UTF-8",
     },
   });
-  return res;
 };

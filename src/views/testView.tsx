@@ -1,12 +1,12 @@
 import type { NextPage } from "next";
 import { Entity, Data } from "types/entity-types";
-import { List, Typography, Divider, Button, Checkbox, Form, Input } from "antd";
+import { List, Typography, Divider, Button, Form, Input } from "antd";
 
 const TestView: NextPage<Data> = (props) => {
-  const { responce } = props;
+  const { responce, mutationResponce } = props;
   const { data, isLoading, isError } = responce;
   const onFinish = (values: any) => {
-    console.log("Success", values);
+    mutationResponce.mutate(values);
   };
 
   const onFinishFailed = (errorInfo: any) => {

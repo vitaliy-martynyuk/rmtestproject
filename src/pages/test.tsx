@@ -3,9 +3,9 @@ import type { NextPage } from "next";
 import TestView from "views/testView";
 
 const Test: NextPage = () => {
-  const { characters } = useCharacters();
+  const { fetchResult, mutationResult } = useCharacters();
 
-  return <TestView responce={characters} />;
+  return <TestView responce={fetchResult} mutationResponce={mutationResult} />;
 };
 
 export default Test;
@@ -13,6 +13,6 @@ export default Test;
 // commit + branch dev *
 // clean up files *
 // move query-creator to hooks *
-// create hook wrapper for mutation
+// create hook wrapper for mutation *
 // fix query
 // fix namingss
