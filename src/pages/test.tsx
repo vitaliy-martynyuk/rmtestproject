@@ -3,16 +3,16 @@ import type { NextPage } from "next";
 import TestView from "views/testView";
 
 const Test: NextPage = () => {
-  const { characters, addCharacter, createMutation } = useCharacters();
+  const { characters } = useCharacters();
 
-  return <TestView data={characters.data} createMutation={createMutation} />;
+  return <TestView responce={characters} />;
 };
 
 export default Test;
 
-// commit + branch dev
-// clean up files
-// move query-creator to hooks
+// commit + branch dev *
+// clean up files *
+// move query-creator to hooks *
 // create hook wrapper for mutation
 // fix query
 // fix namingss

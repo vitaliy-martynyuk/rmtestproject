@@ -2,7 +2,6 @@ import { Entity } from "types/entity-types";
 
 export const fetchData = (url: string) => async () => {
   const res = await fetch(url);
-  console.log("fetchData");
   return res.json();
 };
 

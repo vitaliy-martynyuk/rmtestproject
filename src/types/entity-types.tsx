@@ -9,9 +9,9 @@ export interface Entity {
 }
 
 export interface Data {
-  data: Array<Entity> | undefined;
-  isLoading?: boolean;
-  isError?: boolean;
-  postCharacter?: (data: Entity) => Promise<any>;
-  createMutation?: () => void;
+  responce: {
+    data: Array<Entity> | undefined;
+    isLoading: boolean;
+    isError: boolean;
+  };
 }

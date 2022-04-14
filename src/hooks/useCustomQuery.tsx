@@ -15,7 +15,7 @@ export function useCustomQuery<TResult = unknown, TError = unknown>(
   fn: QueryFunction<TResult>,
   options?: CustomQueryOptions<TResult, TError>
 ) {
-  const result = useQuery(key, fn, { refetchOnWindowFocus: false });
+  const result = useQuery(key, fn, options);
 
   return result;
 }

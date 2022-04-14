@@ -1,12 +1,14 @@
 import { CHARACTER_URL } from "constants/api";
 import { useMutation } from "react-query";
 import { fetchData, postData } from "services/fetch-creator";
-import { useCustomQuery } from "services/query-creator";
-import { Entity } from "types/entity-types";
+import { useCustomQuery } from "hooks/useCustomQuery";
+import { Data, Entity } from "types/entity-types";
 
 export const useCharacters = () => {
   const fetchEntities = fetchData(CHARACTER_URL);
-  const characters = useCustomQuery<Entity[]>("users", fetchEntities);
+  const characters = useCustomQuery<Entity[]>("users", fetchEntities, {
+    refetchOnWindowFocus: false,
+  });
 
   const addCharacter = (data: Entity) => {
     return postData(CHARACTER_URL, "POST", data);

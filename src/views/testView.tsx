@@ -3,17 +3,10 @@ import { Entity, Data } from "types/entity-types";
 import { List, Typography, Divider, Button, Checkbox, Form, Input } from "antd";
 
 const TestView: NextPage<Data> = (props) => {
-  const { data, isLoading, isError, createMutation } = props;
-
-  console.log(data);
-  const mutation = createMutation();
+  const { responce } = props;
+  const { data, isLoading, isError } = responce;
   const onFinish = (values: any) => {
-    try {
-      mutation.mutate(values);
-      console.log("success");
-    } catch (error) {
-      console.log(error);
-    }
+    console.log("Success", values);
   };
 
   const onFinishFailed = (errorInfo: any) => {
