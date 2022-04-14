@@ -20,6 +20,8 @@ const Test: NextPage = () => {
 
 export default Test
 
+// commit + branch dev
+// clean up files
 // move query-creator to hooks
 // create hook wrapper for mutation
 // fix query 
