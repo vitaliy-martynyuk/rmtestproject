@@ -1,6 +1,6 @@
-import type { AppProps } from 'next/app'
-import { QueryClient, QueryClientProvider, useQueryClient } from 'react-query';
-import 'antd/dist/antd.variable.min.css'
+import type { AppProps } from "next/app";
+import { QueryClient, QueryClientProvider, useQueryClient } from "react-query";
+import "antd/dist/antd.variable.min.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const queryClient = new QueryClient();
@@ -12,4 +12,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default MyApp
+export default MyApp;

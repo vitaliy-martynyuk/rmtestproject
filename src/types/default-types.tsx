@@ -1,3 +1,3 @@
 export interface Function {
-    a: () => void
-};
+  a: () => void;
+}
