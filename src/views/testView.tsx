@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
-import { Entity, Data } from "types/entity-types";
+import { User, ResponseResult } from "types/entity-types";
 import { List, Typography, Divider, Button, Form, Input } from "antd";
 
-const TestView: NextPage<Data> = (props) => {
+const TestView: NextPage<ResponseResult> = (props) => {
   const { responce, mutationResponce } = props;
   const { data, isLoading, isError } = responce;
   const onFinish = (values: any) => {
@@ -27,7 +27,7 @@ const TestView: NextPage<Data> = (props) => {
       <List
         bordered
         dataSource={data}
-        renderItem={(item: Entity) => (
+        renderItem={(item: User) => (
           <List.Item>
             <Typography.Text>{item.name}</Typography.Text>
             <Typography.Text italic>{item.username}</Typography.Text>

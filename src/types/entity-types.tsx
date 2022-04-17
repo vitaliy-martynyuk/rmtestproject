@@ -1,7 +1,7 @@
 import { Key } from "react";
 import { UseMutationResult } from "react-query";
 
-export interface Entity {
+export interface User {
   id: Key;
   name: string;
   email: string;
@@ -9,11 +9,11 @@ export interface Entity {
   phone: string;
 }
 
-export interface Data {
+export interface ResponseResult {
   responce: {
-    data: Array<Entity> | undefined;
+    data: Array<User> | undefined;
     isLoading: boolean;
     isError: boolean;
   };
-  mutationResponce: UseMutationResult<Response, unknown, Entity, unknown>;
+  mutationResponce: UseMutationResult<Response, unknown, User, unknown>;
 }

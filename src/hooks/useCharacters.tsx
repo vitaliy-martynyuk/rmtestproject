@@ -1,11 +1,11 @@
-import { CHARACTER_URL } from "constants/api";
+import { USER_URL } from "constants/api";
 import { fetchData } from "services/fetch-creator";
 import { useCustomQuery } from "hooks/useCustomQuery";
-import { Entity } from "types/entity-types";
+import { User } from "types/entity-types";
 
 export const useCharacters = () => {
-  const fetchEntities = fetchData(CHARACTER_URL);
-  const { fetchResult, mutationResult } = useCustomQuery<Entity[]>(
+  const fetchEntities = fetchData(USER_URL);
+  const { fetchResult, mutationResult } = useCustomQuery<User[]>(
     "users",
     fetchEntities,
     {
