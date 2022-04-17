@@ -1,17 +1,19 @@
-import { Key } from 'react';
+import { Key } from "react";
+import { UseMutationResult } from "react-query";
 
-export interface Entity {
-    id: Key;
-    name: string;
-    email: string;
-    username: string;
-    phone: string;
+export interface User {
+  id: Key;
+  name: string;
+  email: string;
+  username: string;
+  phone: string;
 }
 
-export interface Data {
-    data: Array<Entity> | undefined;
-    isLoading?: boolean;
-    isError?: boolean;
-    postCharacter?: (data: Entity) => Promise<any>;
-    createMutation?: () => void;
+export interface ResponseResult {
+  responce: {
+    data: Array<User> | undefined;
+    isLoading: boolean;
+    isError: boolean;
+  };
+  mutationResponce: UseMutationResult<Response, unknown, User, unknown>;
 }

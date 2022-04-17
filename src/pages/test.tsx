@@ -1,28 +1,18 @@
-import { useCharacters } from 'hooks/useCharacters';
-import type { NextPage } from 'next'
-import { Data, Entity } from 'types/entity-types';
-import { List, Typography, Divider } from 'antd';
-import TestView from 'views/testView';
-
-
+import { useCharacters } from "hooks/useCharacters";
+import type { NextPage } from "next";
+import TestView from "views/testView";
 
 const Test: NextPage = () => {
-    const { characters, addCharacter, createMutation } = useCharacters();
+  const { fetchResult, mutationResult } = useCharacters();
 
-    return (
-        <TestView
-            data={characters.data}
-            createMutation={createMutation}
-        />
-    );
-}
+  return <TestView responce={fetchResult} mutationResponce={mutationResult} />;
+};
 
+export default Test;
 
-export default Test
-
-// commit + branch dev
-// clean up files
-// move query-creator to hooks
-// create hook wrapper for mutation
-// fix query 
+// commit + branch dev *
+// clean up files *
+// move query-creator to hooks *
+// create hook wrapper for mutation *
+// fix query
 // fix namingss
